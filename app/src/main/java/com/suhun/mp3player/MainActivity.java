@@ -37,7 +37,8 @@ public class MainActivity extends AppCompatActivity {
 
     private void initMp3Player(){
         appData = (AppData) getApplication();
-
+        appData.mp3ListHandler = new Mp3ListHandler(getContentResolver());
+        appData.mp3ListHandler.getMp3SongList();
     }
 
     private boolean isSendUserPermissionAboutMp3Player(){
